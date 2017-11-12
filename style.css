@@ -1,0 +1,6 @@
+p {
+	white-space: pre-wrap;  /* <-- THIS PRESERVES THE LINE BREAKS */
+}
+textarea {
+	width: 100%;
+}
