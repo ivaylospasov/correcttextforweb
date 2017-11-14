@@ -1,6 +1,7 @@
 function fix() {
     "use strict";
     /*jslint browser:true */
+    // Sample comment
     var getForm, content, corrected, firstCode, i, myCode;
     getForm = document.getElementById("formcorrect");
     content = getForm.elements["textraw"].value;

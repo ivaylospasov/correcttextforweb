@@ -1,5 +1,5 @@
 p {
-	white-space: pre-wrap;  /* <-- THIS PRESERVES THE LINE BREAKS */
+	white-space: pre-wrap;  /* <-- THIS PRESERVES ALL LINE BREAKS */
 }
 textarea {
 	width: 100%;
