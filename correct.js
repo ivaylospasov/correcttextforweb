@@ -2,7 +2,7 @@ function fix() {
     "use strict";
     /*jslint browser:true */
     // Sample comment
-    var getForm, content, corrected, firstCode, i, myCode;
+    var getForm, content, corrected, firstCode, i, myCode, sinhron, word;
     getForm = document.getElementById("formcorrect");
     content = getForm.elements["textraw"].value;
     corrected = content.replace(/(?:\r\n|\r|\n)/g, '<br>');
@@ -24,6 +24,14 @@ function fix() {
         firstCode = "W" + i + ".*}";
         myCode = new RegExp(firstCode);
         corrected = corrected.replace(myCode, "");
+    }
+    // if (lfckv = document.getElementById("sinhron").checked) {
+    //     console.log("Success");
+    // }
+    sinhron = document.getElementById("sinhron").checked;
+    if (sinhron === true) {
+        word = new RegExp("СИНХРОН", "g");
+        corrected = corrected.replace(word, "");
     }
     document.getElementById("demo").innerHTML = corrected;
 }

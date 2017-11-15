@@ -12,11 +12,11 @@
             <div class="row">
                 <div class="col-xl">
                     <div>
-                        Тази страница е разработена, за да помага на интернет редакторите при коригиране на текст за сайт. Към момента премахва ненужен код от текста, ненужни интервали в него и коригира интервалите пред препинателни знаци
+                        Тази страница е разработена, за да помага на интернет редакторите при коригиране на текст за сайт. Към момента премахва ненужен код от текста, ненужни интервали в него и коригира интервалите пред препинателни знаци.
                     </div>
                     <br />
                     <div>
-                        Разработил: Ивайло Спасов 
+                        Разработил: Ивайло Спасов
                     </div>
                     <br />
                 </div>
@@ -25,15 +25,17 @@
                 <div class="col-xl">
                     <form id="formcorrect" action="index.html" method="post">
                         <textarea name="textraw" rows="10" cols="40" placeholder="Поставете тук текста за корекция."></textarea>
-                        <input type="checkbox" class="blank" name="blank" value="blank"> Премахни "БЛАНК" в текста<br>
-                        <input type="checkbox" class="sinhron" name="sinhron" value="sinhron"> Премахни "СИНХРОН" в текста<br>
-                        <input type="checkbox" class="video" name="video" value="video"> Премахни "ВИДЕО" в текста<br>
+                        <input type="checkbox" id= "blank" class="blank" name="blank" value="blank"> Премахни "БЛАНК" в текста<br>
+                        <input type="checkbox" id="sinhron" class="sinhron" name="sinhron" value="sinhron"> Премахни "СИНХРОН" в текста<br>
+                        <input type="checkbox" id="video" class="video" name="video" value="video"> Премахни "ВИДЕО" в текста<br>
                     </form>
                     <div><strong>След като копирате готовия текст, натиснете първата иконата "<>" над текстовото поле в админ панела и тогава поставете текста в черния фон.</strong></div>
                     <br />
                     <div><button type="button" class="btn btn-outline-success" onclick="fix()">Коригирай текста</button></div>
                     <hr>
                     <div id="demo"></div>
+                    <br />
+                    <br />
                 </div>
             </div>
         </div>
