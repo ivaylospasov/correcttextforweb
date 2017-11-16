@@ -1,11 +1,12 @@
 function fix() {
     "use strict";
     /*jslint browser:true */
-    // Sample comment
-    var getForm, content, corrected, firstCode, i, myCode, sinhron, word;
+    var getForm, checkBlank, checkSinhron, checkText, checkVideo, content, corrected, firstCode, i, myCode, signsOld, signsNew, word;
     getForm = document.getElementById("formcorrect");
     content = getForm.elements["textraw"].value;
     corrected = content.replace(/(?:\r\n|\r|\n)/g, '<br>');
+    signsOld = ["¤", " ,", " .", "„", "“"];
+    signsNew = ["", ", ", ". ", "\"", "\""];
     corrected = corrected.replace(/¤/g, "");
     corrected = corrected.replace(/\./g, ". ");
     corrected = corrected.replace(/,/g, ", ");
@@ -28,9 +29,24 @@ function fix() {
     // if (lfckv = document.getElementById("sinhron").checked) {
     //     console.log("Success");
     // }
-    sinhron = document.getElementById("sinhron").checked;
-    if (sinhron === true) {
-        word = new RegExp("СИНХРОН", "g");
+    checkBlank = document.getElementById("blank").checked;
+    if (checkBlank === true) {
+        word = new RegExp("БЛАНК: ", "g");
+        corrected = corrected.replace(word, "");
+    }
+    checkSinhron = document.getElementById("sinhron").checked;
+    if (checkSinhron === true) {
+        word = new RegExp("СИНХРОН: ", "g");
+        corrected = corrected.replace(word, "");
+    }
+    checkText = document.getElementById("text").checked;
+    if (checkText === true) {
+        word = new RegExp("ТЕКСТ: ", "g");
+        corrected = corrected.replace(word, "");
+    }
+    checkVideo = document.getElementById("video").checked;
+    if (checkVideo === true) {
+        word = new RegExp("ВИДЕО: ", "g");
         corrected = corrected.replace(word, "");
     }
     document.getElementById("demo").innerHTML = corrected;
