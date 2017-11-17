@@ -29,6 +29,8 @@ function fix() {
     // if (lfckv = document.getElementById("sinhron").checked) {
     //     console.log("Success");
     // }
+    // REGEX all letters in word
+    // (?=.*С)(?=.*Н)(?=.*Х).{3}
     checkBlank = document.getElementById("blank").checked;
     if (checkBlank === true) {
         word = new RegExp("БЛАНК: ", "g");
