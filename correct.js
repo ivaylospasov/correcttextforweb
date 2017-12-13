@@ -43,7 +43,7 @@ function fix() {
     }
     checkSinhron = document.getElementById("sinhron").checked;
     if (checkSinhron === true) {
-        allSinhrons = ["СИНХРОН: ", "СИНХРОН:", "СИНХРОН", "СИНХ: ", "СИНХ:", "СИНХ", "СНХ: ", "СНХ:", "СНХ", "СХН: ", "СХН:", "СХН", "СХР: ", "СХР:", "СХР"];
+        allSinhrons = ["СИНХРОН: ", "СИНХРОН:", "СИНХРОН", "СХРН:", "СХРН: ", "СИНХ: ", "СИНХ:", "СИНХ", "СНХ: ", "СНХ:", "СНХ", "СХН: ", "СХН:", "СХН", "СХР: ", "СХР:", "СХР"];
         for (i = 0; i < allSinhrons.length; i++) {
             word = new RegExp(allSinhrons[i], "g");
             corrected = corrected.replace(word, "");
